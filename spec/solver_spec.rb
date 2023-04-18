@@ -13,6 +13,12 @@ describe Solver do
     it 'should return 6 when n = 3' do
       expect(solver.factorial(3)).to eq 6
     end
+    it 'should raise an error when n = -1' do
+      expect { solver.factorial(-1) }.to raise_error ArgumentError
+    end
+    it 'should raise an error when n = -2' do
+      expect { solver.factorial(-2) }.to raise_error ArgumentError
+    end
   end
 
   context 'When testing the reverse method' do
